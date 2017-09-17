@@ -1,14 +1,97 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cs121App</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Cs121App</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!-- Navigation -->
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="#">Start Bootstrap</a>
+	            </div>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav">
+	                    <li>
+	                        <a href="#">About</a>
+	                    </li>
+	                    <li>
+	                        <a href="#">Services</a>
+	                    </li>
+	                    <li>
+	                        <a href="#">Contact</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container -->
+	    </nav>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	    <!-- Page Content -->
+	    <div class="container">
+	    	<div class="row">
+		    	<div class="col-lg-12 text-center">
+	    		<div>Hello lets make music.</div>
+	    		<br>
+	    		<br>
+	    		<br>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<div class="section bg-white">
+  <h2 id="example"><a href="#example">For Example</a></h2>
+  <p>Let&rsquo;s say you have these three Wave files:</p>
+  <ul class="audio-list">
+    <li>
+      <label><code>a.wav</code>:</label>
+      <audio controls class="inline">
+        <source src="68437__pinkyfinger__piano-a.wav" type="audio/wav">
+      </audio>
+    </li>
+    <li>
+      <label><code>f.wav</code>:</label>
+      <audio controls class="inline">
+        <source src="68445__pinkyfinger__piano-f.wav" type="audio/wav">
+      </audio>
+    </li>
+    <li>
+      <label><code>d.wav</code>:</label>
+      <audio controls class="inline">
+        <source src="68442__pinkyfinger__piano-d.wav" type="audio/wav">
+      </audio>
+    </li>
+  </ul>
+  <p>This program will concatenate them into one file called <code>one_two_three.wav</code>:</p>
+  <ul class="audio-list">
+    <li>
+      <label><code>one_two_three.wav</code>:</label>
+      <audio controls class="inline">
+        <source src="one_two_three.wav" type="audio/wav">
+      </audio>
+    </li>
+  </ul>
+  </div>
+
+
+	    		<button>Press me</button>
+		    	</div>
+	    	</div>
+	    	<!-- /.row -->
+	    </div>
+	    <!-- /.container -->
+	  <style>body{padding-top:70px;}</style>
+	</body>
+	</html>
+
+
