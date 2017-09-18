@@ -7,6 +7,33 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+<style type="text/css">
+.container{
+	position: relative;
+	float: center;
+	/*border:5px solid black;*/
+}
+#white-key{
+    /*position: absolute;*/
+    bottom: 100px;
+    right: 10px;
+    width: 50px;
+    height: 300px;
+    background: white;
+	border:2px solid black;
+	float: left;
+    box-shadow: 10;
+}
+#black-key{
+    /*position: absolute;*/
+    bottom: 100px;
+    right: 10px;
+    width: 30px;
+    height: 200px;
+    float: left;
+    background: black;
+}
+</style>
 <body>
 	<!-- Navigation -->
 	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -49,6 +76,55 @@
 	    		<br>
 	    		<br>
 
+
+<audio id="mysoundclip" preload="auto">
+	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/a.wav"></source>
+</audio>
+
+<button onclick="document.getElementById('mysoundclip').play();">Click Me!</button>
+
+
+
+<button onclick="document.getElementById('mysoundclip2').play();">I Work!</button>
+
+<br>
+<audio id="mysoundclip2" preload="auto" >
+	<source src="http://www.wav-sounds.com/cartoon/bugsbunny1.wav" ></source>
+</audio>
+<div class = "container">
+	<div id = "white-key"></div>
+	<div id = "black-key"></div>
+	<div id = "white-key"></div>
+	<div id = "black-key"></div>
+	<div id = "white-key"></div>
+	<div id = "white-key"></div>
+	<div id = "black-key"></div>
+	<div id = "white-key"></div>
+	<div id = "black-key"></div>
+	<div id = "white-key"></div>
+	<div id = "black-key"></div>
+	<div id = "white-key"></div>
+	<div id = "white-key"></div>
+
+</div>
+<!-- <svg>
+	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+	<rect id = "black-key" x="20" y="0" height="200" width="20"></rect>
+	<rect id = "white-key" x="30" y="0" height="300" width="20"></rect>
+	<rect id = "black-key" x="40" y="0" height="200" width="20"></rect>
+	<rect id = "white-key" x="50" y="0" height="300" width="20"></rect>
+	<rect id = "white-key" x="70" y="0" height="300" width="20"></rect>
+	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
+	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
+	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
+	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+
+</svg>
+ -->
+<!-- 
 <div class="section bg-white">
   <h2 id="example"><a href="#example">For Example</a></h2>
   <p>Let&rsquo;s say you have these three Wave files:</p>
@@ -81,10 +157,8 @@
       </audio>
     </li>
   </ul>
-  </div>
+  </div> -->
 
-
-	    		<button>Press me</button>
 		    	</div>
 	    	</div>
 	    	<!-- /.row -->

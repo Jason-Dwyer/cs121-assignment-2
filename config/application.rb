@@ -13,7 +13,7 @@ module Cs121App
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-FILES_TO_APPEND = ["68437__pinkyfinger__piano-a.wav", "68445__pinkyfinger__piano-f.wav", "68442__pinkyfinger__piano-d.wav"]
+FILES_TO_APPEND = []#["68437__pinkyfinger__piano-a.wav", "68445__pinkyfinger__piano-f.wav", "68442__pinkyfinger__piano-d.wav"]
 
 Writer.new("append.wav", Format.new(:stereo, :pcm_16, 44100)) do |writer|
   FILES_TO_APPEND.each do |file_name|
