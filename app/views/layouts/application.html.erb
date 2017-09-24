@@ -14,9 +14,6 @@
 	/*border:5px solid black;*/
 }
 .white-key{
-    /*position: absolute;*/
-    bottom: 100px;
-    right: 10px;
     width: 50px;
     height: 300px;
     background: white;
@@ -25,24 +22,27 @@
     box-shadow: 10;
 }
 .black-key{
-    /*position: absolute;*/
-    bottom: 100px;
-    right: 10px;
     width: 30px;
     height: 200px;
     float: left;
     background: black;
 }
-.white-key-pressed{
-	bottom: 100px;
-    right: 10px;
-    width: 50px;
-    height: 300px;
-    background: lightgray;
-	border:2px solid black;
-	float: left;
-    box-shadow: 10;
+.white-note{
+	position: relative;
+	top: 275px;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
 }
+
+.black-note{
+	position: relative;
+	top: 180px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+
 </style>
 <body>
 	<!-- Navigation -->
@@ -83,6 +83,8 @@
 		    	<div class="col-lg-12 text-center">
 	    		<div>Hello lets make music.</div>
 	    		<br>
+	    		<div>Here you can play around on the keyboard and create melodies. Try pressing a few notes,
+	    		and learn how to play.</div>
 	    		<br>
 	    		<br>
 
@@ -166,86 +168,90 @@
 		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/C5.wav"></source>
 	</audio>
 
-	<div id = "C3" class = "white-key" onclick="playNote('piano_C3', 'C3');"></div>
-	<div id = "Db3" class = "black-key" onclick="playNote('piano_Db3', 'Db3');"></div>
-	<div id = "D3" class = "white-key" onclick="playNote('piano_D3', 'D3');"></div>
-	<div id = "Eb3" class = "black-key" onclick="playNote('piano_Eb3', 'Eb3');"></div>
-	<div id = "E3" class = "white-key" onclick="playNote('piano_E3', 'E3');"></div>
-	<div id = "F3" class = "white-key" onclick="playNote('piano_F3', 'F3');"></div>
-	<div id = "Gb3" class = "black-key" onclick="playNote('piano_Gb3', 'Gb3');"></div>
-	<div id = "G3" class = "white-key" onclick="playNote('piano_G3', 'G3');"></div>
-	<div id = "Ab3" class = "black-key" onclick="playNote('piano_Ab3', 'Ab3');"></div>
-	<div id = "A3" class = "white-key" onclick="playNote('piano_A3', 'A3');"></div>
-	<div id = "Bb3" class = "black-key" onclick="playNote('piano_Bb3', 'Bb3');"></div>
-	<div id = "B3" class = "white-key" onclick="playNote('piano_B3', 'B3');"></div>
-	<div id = "C4" class = "white-key" onclick="playNote('piano_C4', 'C4');"></div>
-	<div id = "Db4" class = "black-key" onclick="playNote('piano_Db4', 'Db4');"></div>
-	<div id = "D4" class = "white-key" onclick="playNote('piano_D4', 'D4');"></div>
-	<div id = "Eb4" class = "black-key" onclick="playNote('piano_Eb4', 'Eb4');"></div>
-	<div id = "E4" class = "white-key" onclick="playNote('piano_E4', 'E4');"></div>
-	<div id = "F4" class = "white-key" onclick="playNote('piano_F4', 'F4');"></div>
-	<div id = "Gb4" class = "black-key" onclick="playNote('piano_Gb4', 'Gb4');"></div>
-	<div id = "G4" class = "white-key" onclick="playNote('piano_G4', 'G4');"></div>
-	<div id = "Ab4" class = "black-key" onclick="playNote('piano_Ab4', 'Ab4');"></div>
-	<div id = "A4" class = "white-key" onclick="playNote('piano_A4', 'A4');"></div>
-	<div id = "Bb4" class = "black-key" onclick="playNote('piano_Bb4', 'Bb4');"></div>
-	<div id = "B4" class = "white-key" onclick="playNote('piano_B4', 'B4');"></div>
-	<div id = "C5" class = "white-key" onclick="playNote('piano_C5', 'C5');"></div>
+	<div id = "C3" class = "white-key" onclick="playNote('piano_C3', 'C3');">
+		<p class = "white-note">C</p>
+	</div>
+	<div id = "Db3" class = "black-key" onclick="playNote('piano_Db3', 'Db3');">
+		<p class = "black-note">Db</p>
+	</div>
+	<div id = "D3" class = "white-key" onclick="playNote('piano_D3', 'D3');">
+		<p class = "white-note">D</p>
+	</div>
+	<div id = "Eb3" class = "black-key" onclick="playNote('piano_Eb3', 'Eb3');">
+		<p class = "black-note">Eb</p>
+	</div>
+	<div id = "E3" class = "white-key" onclick="playNote('piano_E3', 'E3');">
+		<p class = "white-note">E</p>
+	</div>
+	<div id = "F3" class = "white-key" onclick="playNote('piano_F3', 'F3');">
+		<p class = "white-note">F</p>
+	</div>
+	<div id = "Gb3" class = "black-key" onclick="playNote('piano_Gb3', 'Gb3');">
+		<p class = "black-note">Gb</p>
+	</div>
+	<div id = "G3" class = "white-key" onclick="playNote('piano_G3', 'G3');">
+		<p class = "white-note">G</p>
+	</div>
+	<div id = "Ab3" class = "black-key" onclick="playNote('piano_Ab3', 'Ab3');">
+		<p class = "black-note">Ab</p>
+	</div>
+	<div id = "A3" class = "white-key" onclick="playNote('piano_A3', 'A3');">
+		<p class = "white-note">A</p>
+	</div>
+	<div id = "Bb3" class = "black-key" onclick="playNote('piano_Bb3', 'Bb3');">
+		<p class = "black-note">Bb</p>
+	</div>
+	<div id = "B3" class = "white-key" onclick="playNote('piano_B3', 'B3');">
+		<p class = "white-note">B</p>
+	</div>
+	<div id = "C4" class = "white-key" onclick="playNote('piano_C4', 'C4');">
+		<p class = "white-note">C</p>
+	</div>
+	<div id = "Db4" class = "black-key" onclick="playNote('piano_Db4', 'Db4');">
+		<p class = "black-note">Db</p>
+	</div>
+	<div id = "D4" class = "white-key" onclick="playNote('piano_D4', 'D4');">
+		<p class = "white-note">D</p>
+	</div>
+	<div id = "Eb4" class = "black-key" onclick="playNote('piano_Eb4', 'Eb4');">
+		<p class = "black-note">Eb</p>
+	</div>
+	<div id = "E4" class = "white-key" onclick="playNote('piano_E4', 'E4');">
+		<p class = "white-note">E</p>
+	</div>
+	<div id = "F4" class = "white-key" onclick="playNote('piano_F4', 'F4');">
+		<p class = "white-note">F</p>
+	</div>
+	<div id = "Gb4" class = "black-key" onclick="playNote('piano_Gb4', 'Gb4');">
+		<p class = "black-note">Gb</p>
+	</div>
+	<div id = "G4" class = "white-key" onclick="playNote('piano_G4', 'G4');">
+		<p class = "white-note">G</p>
+	</div>
+	<div id = "Ab4" class = "black-key" onclick="playNote('piano_Ab4', 'Ab4');">
+		<p class = "black-note">Ab</p>
+	</div>
+	<div id = "A4" class = "white-key" onclick="playNote('piano_A4', 'A4');">
+		<p class = "white-note">A</p>
+	</div>
+	<div id = "Bb4" class = "black-key" onclick="playNote('piano_Bb4', 'Bb4');">
+		<p class = "black-note">Bb</p>
+	</div>
+	<div id = "B4" class = "white-key" onclick="playNote('piano_B4', 'B4');">
+		<p class = "white-note">B</p>
+	</div>
+	<div id = "C5" class = "white-key" onclick="playNote('piano_C5', 'C5');">
+		<p class = "white-note">C</p>
+	</div>
 
 
 </div>
-<!-- <svg>
-	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
-	<rect id = "black-key" x="20" y="0" height="200" width="20"></rect>
-	<rect id = "white-key" x="30" y="0" height="300" width="20"></rect>
-	<rect id = "black-key" x="40" y="0" height="200" width="20"></rect>
-	<rect id = "white-key" x="50" y="0" height="300" width="20"></rect>
-	<rect id = "white-key" x="70" y="0" height="300" width="20"></rect>
-	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
-	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
-	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
-	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
-	<rect id = "black-key" x="0" y="0" height="200" width="20"></rect>
-	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
-	<rect id = "white-key" x="0" y="0" height="300" width="20"></rect>
+<br>
+<br>
 
-</svg>
- -->
-<!-- 
-<div class="section bg-white">
-  <h2 id="example"><a href="#example">For Example</a></h2>
-  <p>Let&rsquo;s say you have these three Wave files:</p>
-  <ul class="audio-list">
-    <li>
-      <label><code>a.wav</code>:</label>
-      <audio controls class="inline">
-        <source src="68437__pinkyfinger__piano-a.wav" type="audio/wav">
-      </audio>
-    </li>
-    <li>
-      <label><code>f.wav</code>:</label>
-      <audio controls class="inline">
-        <source src="68445__pinkyfinger__piano-f.wav" type="audio/wav">
-      </audio>
-    </li>
-    <li>
-      <label><code>d.wav</code>:</label>
-      <audio controls class="inline">
-        <source src="68442__pinkyfinger__piano-d.wav" type="audio/wav">
-      </audio>
-    </li>
-  </ul>
-  <p>This program will concatenate them into one file called <code>one_two_three.wav</code>:</p>
-  <ul class="audio-list">
-    <li>
-      <label><code>one_two_three.wav</code>:</label>
-      <audio controls class="inline">
-        <source src="one_two_three.wav" type="audio/wav">
-      </audio>
-    </li>
-  </ul>
-  </div> -->
-
+<div>
+	<button onclick="toggleNotes()">Toggle Note Names</button>
+</div>
 		    	</div>
 	    	</div>
 	    	<!-- /.row -->

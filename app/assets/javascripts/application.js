@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+var notesOn = true;
 
 function playNote(noteId, noteName){
 	document.getElementById(noteId).play();
@@ -30,3 +31,31 @@ function playNote(noteId, noteName){
 	}, 500) //wait one second
 }
 
+function toggleNotes(){
+	if (notesOn){
+		var list = document.getElementsByClassName("white-note");
+		for (x in list){			
+			list[x].style.display = "none";
+			if (x == 14){ break; }
+		}
+		var list2 = document.getElementsByClassName("black-note");
+		for (x in list2){
+			list2[x].style.display = "none";
+			if (x == 9){ break; }		
+		}
+	}
+	else{
+		var list = document.getElementsByClassName("white-note");
+		for (x in list){
+			list[x].style.display = "inline";
+			if (x == 14){ break; }
+		}
+		var list2 = document.getElementsByClassName("black-note");
+		for (x in list2){
+			list2[x].style.display = "inline";
+			if (x == 9){ break; }
+		}
+	}
+	notesOn = !notesOn;
+
+}
