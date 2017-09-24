@@ -15,3 +15,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function playNote(noteId, noteName){
+	document.getElementById(noteId).play();
+	document.getElementById(noteName).style.background = "blue";
+	setTimeout(function() {
+		if(noteName.length == 3){ //its a black note
+			document.getElementById(noteName).style.background = "black";
+		}
+		else{
+			document.getElementById(noteName).style.background = "white";
+		}
+	}, 500) //wait one second
+}
+

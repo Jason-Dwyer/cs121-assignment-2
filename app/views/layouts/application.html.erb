@@ -13,7 +13,7 @@
 	float: center;
 	/*border:5px solid black;*/
 }
-#white-key{
+.white-key{
     /*position: absolute;*/
     bottom: 100px;
     right: 10px;
@@ -24,7 +24,7 @@
 	float: left;
     box-shadow: 10;
 }
-#black-key{
+.black-key{
     /*position: absolute;*/
     bottom: 100px;
     right: 10px;
@@ -32,6 +32,16 @@
     height: 200px;
     float: left;
     background: black;
+}
+.white-key-pressed{
+	bottom: 100px;
+    right: 10px;
+    width: 50px;
+    height: 300px;
+    background: lightgray;
+	border:2px solid black;
+	float: left;
+    box-shadow: 10;
 }
 </style>
 <body>
@@ -77,34 +87,111 @@
 	    		<br>
 
 
-<audio id="mysoundclip" preload="auto">
-	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/a.wav"></source>
-</audio>
-
-<button onclick="document.getElementById('mysoundclip').play();">Click Me!</button>
-
-
-
-<button onclick="document.getElementById('mysoundclip2').play();">I Work!</button>
 
 <br>
-<audio id="mysoundclip2" preload="auto" >
-	<source src="http://www.wav-sounds.com/cartoon/bugsbunny1.wav" ></source>
-</audio>
 <div class = "container">
-	<div id = "white-key"></div>
-	<div id = "black-key"></div>
-	<div id = "white-key"></div>
-	<div id = "black-key"></div>
-	<div id = "white-key"></div>
-	<div id = "white-key"></div>
-	<div id = "black-key"></div>
-	<div id = "white-key"></div>
-	<div id = "black-key"></div>
-	<div id = "white-key"></div>
-	<div id = "black-key"></div>
-	<div id = "white-key"></div>
-	<div id = "white-key"></div>
+	<audio id="piano_C3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/C3.wav"></source>
+	</audio>
+	<audio id="piano_Db3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Db3.wav"></source>
+	</audio>	
+	<audio id="piano_D3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/D3.wav"></source>
+	</audio>	
+	<audio id="piano_Eb3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Eb3.wav"></source>
+	</audio>
+	<audio id="piano_E3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/E3.wav"></source>
+	</audio>
+	<audio id="piano_F3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/F3.wav"></source>
+	</audio>
+	<audio id="piano_Gb3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Gb3.wav"></source>
+	</audio>
+	<audio id="piano_G3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/G3.wav"></source>
+	</audio>
+	<audio id="piano_Ab3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Ab3.wav"></source>
+	</audio>
+	<audio id="piano_A3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/A3.wav"></source>
+	</audio>
+	<audio id="piano_Bb3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Bb3.wav"></source>
+	</audio>
+	<audio id="piano_B3" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/B3.wav"></source>
+	</audio>
+	<audio id="piano_C4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/C4.wav"></source>
+	</audio>
+	<audio id="piano_Db4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Db4.wav"></source>
+	</audio>
+	<audio id="piano_D4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/D4.wav"></source>
+	</audio>
+	<audio id="piano_Eb4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Eb4.wav"></source>
+	</audio>	
+	<audio id="piano_E4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/E4.wav"></source>
+	</audio>
+	<audio id="piano_F4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/F4.wav"></source>
+	</audio>
+	<audio id="piano_Gb4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Gb4.wav"></source>
+	</audio>
+	<audio id="piano_G4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/G4.wav"></source>
+	</audio>
+	<audio id="piano_Ab4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Ab4.wav"></source>
+	</audio>
+	<audio id="piano_A4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/A4.wav"></source>
+	</audio>
+	<audio id="piano_Bb4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/Bb4.wav"></source>
+	</audio>
+	<audio id="piano_B4" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/B4.wav"></source>
+	</audio>
+	<audio id="piano_C5" preload="auto">
+		<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer2/sounds/C5.wav"></source>
+	</audio>
+
+	<div id = "C3" class = "white-key" onclick="playNote('piano_C3', 'C3');"></div>
+	<div id = "Db3" class = "black-key" onclick="playNote('piano_Db3', 'Db3');"></div>
+	<div id = "D3" class = "white-key" onclick="playNote('piano_D3', 'D3');"></div>
+	<div id = "Eb3" class = "black-key" onclick="playNote('piano_Eb3', 'Eb3');"></div>
+	<div id = "E3" class = "white-key" onclick="playNote('piano_E3', 'E3');"></div>
+	<div id = "F3" class = "white-key" onclick="playNote('piano_F3', 'F3');"></div>
+	<div id = "Gb3" class = "black-key" onclick="playNote('piano_Gb3', 'Gb3');"></div>
+	<div id = "G3" class = "white-key" onclick="playNote('piano_G3', 'G3');"></div>
+	<div id = "Ab3" class = "black-key" onclick="playNote('piano_Ab3', 'Ab3');"></div>
+	<div id = "A3" class = "white-key" onclick="playNote('piano_A3', 'A3');"></div>
+	<div id = "Bb3" class = "black-key" onclick="playNote('piano_Bb3', 'Bb3');"></div>
+	<div id = "B3" class = "white-key" onclick="playNote('piano_B3', 'B3');"></div>
+	<div id = "C4" class = "white-key" onclick="playNote('piano_C4', 'C4');"></div>
+	<div id = "Db4" class = "black-key" onclick="playNote('piano_Db4', 'Db4');"></div>
+	<div id = "D4" class = "white-key" onclick="playNote('piano_D4', 'D4');"></div>
+	<div id = "Eb4" class = "black-key" onclick="playNote('piano_Eb4', 'Eb4');"></div>
+	<div id = "E4" class = "white-key" onclick="playNote('piano_E4', 'E4');"></div>
+	<div id = "F4" class = "white-key" onclick="playNote('piano_F4', 'F4');"></div>
+	<div id = "Gb4" class = "black-key" onclick="playNote('piano_Gb4', 'Gb4');"></div>
+	<div id = "G4" class = "white-key" onclick="playNote('piano_G4', 'G4');"></div>
+	<div id = "Ab4" class = "black-key" onclick="playNote('piano_Ab4', 'Ab4');"></div>
+	<div id = "A4" class = "white-key" onclick="playNote('piano_A4', 'A4');"></div>
+	<div id = "Bb4" class = "black-key" onclick="playNote('piano_Bb4', 'Bb4');"></div>
+	<div id = "B4" class = "white-key" onclick="playNote('piano_B4', 'B4');"></div>
+	<div id = "C5" class = "white-key" onclick="playNote('piano_C5', 'C5');"></div>
+
 
 </div>
 <!-- <svg>
