@@ -9,15 +9,29 @@
 <br>
 
 <audio id="mysoundclip" preload="auto">
-	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/a.wav"></source>
+	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/piano_a.wav"></source>
 </audio>
 
-<button onclick="document.getElementById('mysoundclip').play();">Click Me!</button>
+<button onclick="document.getElementById('mysoundclip').play();" id="button1" value="mysoundclip">Click Me!</button>
 
 <br>
-<audio id="mysoundclip2" preload="auto" >
-	<source src="http://www.wav-sounds.com/cartoon/bugsbunny1.wav" ></source>
+<audio id="mysoundclip2" preload="auto">
+	<source src="http://www.wav-sounds.com/cartoon/bugsbunny1.wav" id="audio" ></source>
 </audio>
 
-<button onclick="document.getElementById('mysoundclip2').play();">I Work!</button>
+<button onclick="document.getElementById('mysoundclip2').play();" id="button2", value="mysoundclip2">I Work!</button>
+
+
+<input type="button" onclick="fireClick(document.getElementById('button2'))" value="Auto"/>
+
+<input type="button" onclick="document.getElementById('button1').click()" value="Test"/>
+
+<input type="button" onclick="multiClick(document.getElementById('button2'), document.getElementById('button1'))" value="Test2"/>
+
+<input type="button" onclick="multiClick(document.getElementById('button1'), document.getElementById('button2'))" value="Test3"/>
+
+<input type="button" onclick="multiClick(document.getElementById('button1'), document.getElementById('button1'))" value="Test4"/>
+
+
+<p id="demo"></p>
 

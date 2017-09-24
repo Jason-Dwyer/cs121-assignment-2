@@ -1,2 +1,25 @@
 <h1>Pages#RecordMusic</h1>
 <p>Find me in app/views/pages/record.html.erb</p>
+<br>
+
+<audio id="G#" preload="auto">
+	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/piano_g-sharp.wav"></source>
+</audio>
+<button name= "G#" onclick="soundArray = appendSound('G#', soundArray)">G#</button>
+
+<audio id="A" preload="auto">
+	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/piano_a.wav"></source>
+</audio>
+<button onclick="soundArray = appendSound('A', soundArray)">A</button>
+
+<audio id="Bb" preload="auto">
+	<source src="https://raw.githubusercontent.com/Jason-Dwyer/cs121-assignment-2/developer1/sounds/piano_b-flat.wav"></source>
+</audio>
+<button onclick="soundArray = appendSound('Bb', soundArray)">Bb</button>
+<br>
+<button onclick="a = add1(a)">test</button>
+<p id="demo"></p>
+<br>
+<p id="demo2">Current note selection: </p>
+<br>
+<button onclick="playMelody(soundArrayTest)">test2</button>
