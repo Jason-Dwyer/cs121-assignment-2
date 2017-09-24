@@ -4,7 +4,8 @@ end
 
 require 'wavefile'
 include WaveFile
-
+#Not implementing record functionality yet
+=begin
 Reader.new("/Users/oswaldososa/cs121-assignment-2/sounds/piano_a.wav").each_buffer do |buffer|
 	puts "Read #{buffer.samples.length} samples."
 end
@@ -20,3 +21,4 @@ Writer.new("append.wav", Format.new(:stereo, :pcm_16, 44100)) do |writer|
     end
   end
 end
+=end
