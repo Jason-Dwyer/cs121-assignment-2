@@ -2,8 +2,8 @@
 
 ###Piano App 
 
-#####Oswaldo Sosa 
-#####Jason Dwyer
+Oswaldo Sosa 
+Jason Dwyer
 
 Our product is a piano application for people to enjoy creating short melodies, and recording what they create. The user is given two octaves to play with, and every time a note is pressed a wav file will play that note. The notes also light up as you play them, so you can easily tell what note was just pressed. The recording feature lets users record a melody, and then have it play back immediately in the app, and they can also get a wav file of the melody they just created. 
 
