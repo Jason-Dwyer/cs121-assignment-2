@@ -5,7 +5,7 @@
 Oswaldo Sosa 
 Jason Dwyer
 
-Our product is a piano application for people to enjoy creating short melodies, and recording what they create. The user is given two octaves to play with, and every time a note is pressed a wav file will play that note. The notes also light up as you play them, so you can easily tell what note was just pressed. The recording feature lets users record a melody, and then have it play back immediately in the app, and they can also get a wav file of the melody they just created. 
+Our product is a piano application for people to enjoy creating short melodies, and recording what they create. The user is given two octaves to play with, and every time a note is pressed a wav file will play that note. The notes also light up as you play them, so you can easily tell what note was just pressed. The recording feature lets users record a melody, and then have it play back immediately in the app.
 
 MVP:
 
@@ -26,6 +26,8 @@ Issues:
 One major issue we had was finding wav files of each note. We eventually found one pack that had all the notes we needed, but every note was at least twenty seconds long, so we had to shorten them. 
 
 Piano keys aren’t quite right, black keys should be on top of white keys, not purely in between them. 
+
+We cannot get new wavefiles to actually be created, we hope to fix this soon.
 
 There are issues when trying to play the same note consecutively. There has to be a short delay between playing the notes when playing back a melody. This is also a problem when playing the notes on the keyboard. The user has to wait until the note is done playing before playing the same note again.
 
