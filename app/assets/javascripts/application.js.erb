@@ -26,16 +26,17 @@ function setRecord(record){
 }
 
 function playNote(noteId, noteName){
+	//plays the audio file, and also highlights the note in blue 
 	document.getElementById(noteId).play();
 	document.getElementById(noteName).style.background = "blue";
 	setTimeout(function() {
 		if(noteName.length == 3){ //its a black note
 			document.getElementById(noteName).style.background = "black";
 		}
-		else{
+		else{ //its a white note
 			document.getElementById(noteName).style.background = "white";
 		}
-	}, 500) //wait one second
+	}, 500) //wait half a second before changing back to normal  
 
 	if (recordOn){
 		appendSound(noteId, soundArray);
@@ -44,19 +45,20 @@ function playNote(noteId, noteName){
 }
 
 function toggleNotes(){
-	if (notesOn){
+	//This turns on and off the names of the notes. 
+	if (notesOn){ //turn them off
 		var list = document.getElementsByClassName("white-note");
 		for (x in list){			
 			list[x].style.display = "none";
-			if (x == 14){ break; }
+			if (x == 14){ break; } //the first 15 elements are white notes
 		}
 		var list2 = document.getElementsByClassName("black-note");
 		for (x in list2){
 			list2[x].style.display = "none";
-			if (x == 9){ break; }		
+			if (x == 9){ break; } //the first 10 elements are black notes
 		}
 	}
-	else{
+	else{ //turn them on
 		var list = document.getElementsByClassName("white-note");
 		for (x in list){
 			list[x].style.display = "inline";
