@@ -16,15 +16,67 @@
 //= require turbolinks
 //= require_tree .
 
+var notesOn = true;
+var recordOn = false;
 // Creating array where all the notes will be stored
 var soundArray = []
+
+function setRecord(record){
+	recordOn = record;
+}
+
+function playNote(noteId, noteName){
+	document.getElementById(noteId).play();
+	document.getElementById(noteName).style.background = "blue";
+	setTimeout(function() {
+		if(noteName.length == 3){ //its a black note
+			document.getElementById(noteName).style.background = "black";
+		}
+		else{
+			document.getElementById(noteName).style.background = "white";
+		}
+	}, 500) //wait one second
+
+	if (recordOn){
+		appendSound(noteId, soundArray);
+	}
+
+}
+
+function toggleNotes(){
+	if (notesOn){
+		var list = document.getElementsByClassName("white-note");
+		for (x in list){			
+			list[x].style.display = "none";
+			if (x == 14){ break; }
+		}
+		var list2 = document.getElementsByClassName("black-note");
+		for (x in list2){
+			list2[x].style.display = "none";
+			if (x == 9){ break; }		
+		}
+	}
+	else{
+		var list = document.getElementsByClassName("white-note");
+		for (x in list){
+			list[x].style.display = "inline";
+			if (x == 14){ break; }
+		}
+		var list2 = document.getElementsByClassName("black-note");
+		for (x in list2){
+			list2[x].style.display = "inline";
+			if (x == 9){ break; }
+		}
+	}
+	notesOn = !notesOn;
+
+}
 
 function appendSound(audioID, audioArray){
 	// appendSoud is a function that creates an array of all the notes.
 	// It stores their IDs for access to the notes when needed.
 	// Note: This function will most likely have to be modified after including keyboard.
 	var sound = document.getElementById(audioID);
-	sound.play();
 	audioArray.push(audioID);
 	document.getElementById("notes").innerHTML = "Current note selection: " + audioArray;
 	return audioArray;
@@ -41,7 +93,7 @@ function playMelody(audioArray){
 		audio.play();
 		if (audioArray[0] == audioArray[1]){
 			//Consecutive notes require a little more wait time
-			audioLength = audio.duration*1000 + 70;
+			audioLength = audio.duration*1000 + 90;
 		} else{
 			audioLength = audio.duration*1000
 			}
@@ -49,6 +101,19 @@ function playMelody(audioArray){
 		setTimeout(function() {playMelody(audioArray)}, audioLength);
 	}
 }
+
+// Function not working yet
+// function getAudioSources(audioArray){
+// 	var sourceArray = [];
+// 	for(i=0; i < audioArray.length; ++i){
+// 		var sound = document.getElementById(audioArray[i]).src;
+// 		console.log(sound);
+// 		var source = document.getElementById(audioArray[i]).src;
+// 		sourceArray.push(source);
+// 	}
+// 	console.log(sourceArray);
+// 	return sourceArray;
+// }
 
 function playback(audioArray){
 	// Playback displays errors and messages to the user. 

@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   # This is my index
   root 'pages#home'
 
-  get 'pages/play'
-
   get 'pages/home'
 
   get 'pages/record'
